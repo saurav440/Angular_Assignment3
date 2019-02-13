@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Open Movie Data</h2>
+  <div class="col-md-3">
+    <div class="form-group row">
+      <input type="text" #movies value="" class="form-control">
+      <br><br>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary" (click)="submitMovieHandler(movies.value)">Submit</button>
+        </div>
+      </div>
+  </div>
+  <div *ngIf="status">
+      <h3>Movies Details</h3>
+      <p>Title, Released : {{movieDetails.Title}} {{movieDetails.Released}}</p>
+      <p>Actors : {{movieDetails.Actors}}</p>
+      <p>Director : {{movieDetails.Director}} </p>
+      <p>Genre :{{movieDetails.Genre}} </p>
+      <p>Language :{{movieDetails.Language}} </p>
+      <p>Runtime :{{movieDetails.Runtime}} </p>
+      <p>Country : {{movieDetails.Country}} </p>
+    </div>
+</div>
